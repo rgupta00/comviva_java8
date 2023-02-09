@@ -12,6 +12,16 @@ public class Apple {
 		this.color = color;
 	}
 
+	
+	public static boolean isGreen(Apple apple) {
+		return apple.getColor().equals("green");
+	}
+	
+	public boolean isHeay() {
+		return weight>=250;
+	}
+	
+	
 	public int getWeight() {
 		return weight;
 	}

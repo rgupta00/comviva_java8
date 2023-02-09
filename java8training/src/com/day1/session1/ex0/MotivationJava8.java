@@ -20,8 +20,24 @@ public class MotivationJava8 {
 	public static void main(String[] args) {
 		
 		//calculating prime no bw 1 to 1_000_00
+		//time taken: 1150 ms==> 16 core
+		//time taken: 1884 ms
 		
+		System.out.println(Runtime.getRuntime().availableProcessors());
 		
+		long start=System.currentTimeMillis();
+		
+		//F and J framework :(
+		
+		// :)
+		Long nos=LongStream.rangeClosed(1, 1_000_00)
+				.filter(Prime::isPrime)
+				.parallel()
+				.count();
+		
+		long end=System.currentTimeMillis();
+		
+		System.out.println("time taken: "+(end-start)+" ms");
 		/*
 		 * System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "8");
 		or

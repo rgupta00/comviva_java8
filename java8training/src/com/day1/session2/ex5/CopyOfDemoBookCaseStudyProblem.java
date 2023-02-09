@@ -14,8 +14,7 @@ public class CopyOfDemoBookCaseStudyProblem {
 		List<Book> allBooks = loadAllBooks();
 
 		// 1. Find books with more then 400 pages
-		List<Book>booksMoreThen400Pages=allBooks.stream()
-				.filter(b-> b.getPages()>400).collect(Collectors.toList());
+		
 		
 		// 2. Find all books that are java books and more then 400 pages
 		
@@ -61,12 +60,15 @@ public class CopyOfDemoBookCaseStudyProblem {
 
 	private static List<Book> loadAllBooks() {
 		List<Book> books = new ArrayList<Book>();
-		List<Author> authors1 = Arrays.asList(new Author("raj", "gupta", "in"),
+		
+		List<Author> authors1 = Arrays.asList
+				(new Author("raj", "gupta", "in"),
 				new Author("ekta", "gupta", "in"));
 
 		List<Author> authors2 = Arrays.asList(new Author("raj", "gupta", "in"));
 
-		List<Author> authors3 = Arrays.asList(new Author("gunika", "gupta", "us"),
+		List<Author> authors3 = Arrays.asList(
+				new Author("gunika", "gupta", "us"),
 				new Author("keshav", "gupta", "us"));
 
 		books.add(new Book("java", authors1, 400, Subject.JAVA, 2000, "1213"));
